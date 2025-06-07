@@ -11,7 +11,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
-    Button btnCalculator, btnMaxMin, btnQuadratic, btnLogin;
+    Button btnCalculator, btnMaxMin, btnQuadratic, btnLogin, btnProductList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,10 +21,13 @@ public class MainActivity extends AppCompatActivity {
         btnMaxMin = findViewById(R.id.btnMaxMin);
         btnQuadratic = findViewById(R.id.btnQuadratic);
         btnLogin = findViewById(R.id.btnLogin);
+        btnProductList = findViewById(R.id.btnProductList);
 
         btnCalculator.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, CalculatorActivity.class)));
         btnMaxMin.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, MaxMinActivity.class)));
         btnQuadratic.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, QuadraticEquationActivity.class)));
         btnLogin.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, LoginActivity.class)));
+        btnProductList.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, ProductListActivity.class)));
+
     }
 }
